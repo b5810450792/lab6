@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <SplitPane dividerPositions="0.6814814814814815" layoutX="-4.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="407.0" prefWidth="608.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="108.0" prefWidth="606.0">
+               <children>
+                  <TableView fx:id="tableView" prefHeight="273.0" prefWidth="606.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="idate" prefWidth="108.66668701171875" text="วัน/เดือน/ปี" />
+                      <TableColumn fx:id="imoney" prefWidth="153.66668701171875" text="จำนวน" />
+                        <TableColumn fx:id="itype" prefWidth="185.33331298828125" text="ประเภท" />
+                        <TableColumn fx:id="idetail" prefWidth="157.66668701171875" text="ลายละเอียด" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="606.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="55.0" text="จำนวน" />
+                  <Label layoutX="194.0" layoutY="55.0" text="ประเภท" />
+                  <Label layoutX="359.0" layoutY="55.0" text="ราละเอียด" />
+                  <TextField fx:id="money" layoutX="22.0" layoutY="75.0" />
+                  <TextField fx:id="type" layoutX="189.0" layoutY="75.0" />
+                  <TextField fx:id="detail" layoutX="359.0" layoutY="75.0" />
+                  <Label layoutX="76.0" layoutY="15.0" text="วัน/เดือน/ปี" />
+                  <TextField fx:id="date" layoutX="136.0" layoutY="11.0" />
+                  <Button layoutX="527.0" layoutY="43.0" mnemonicParsing="false" onAction="#clickExpense" text="รายจ่าย" />
+                  <Button layoutX="527.0" layoutY="75.0" mnemonicParsing="false" onAction="#clickIncome" text="รายรับ" />
+                  <Label fx:id="label" layoutX="381.0" layoutY="15.0" prefHeight="17.0" prefWidth="60.0" />
+                  <Label layoutX="320.0" layoutY="15.0" prefHeight="17.0" prefWidth="51.0" text="Balance : " />
+                  <Label layoutX="457.0" layoutY="15.0" prefHeight="17.0" prefWidth="51.0" text="Baht" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
